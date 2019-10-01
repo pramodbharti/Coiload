@@ -1,4 +1,4 @@
-package com.db.coiload
+package com.db.coiload.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.db.coiload.R
+import com.db.coiload.adapters.PhotoAdapter
 import com.db.coiload.databinding.ActivityMainBinding
 import com.db.coiload.models.Photo
 

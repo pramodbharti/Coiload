@@ -1,10 +1,11 @@
-package com.db.coiload
+package com.db.coiload.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
+import com.db.coiload.R
 import com.db.coiload.databinding.PhotoItemViewBinding
 import com.db.coiload.models.Photo
 

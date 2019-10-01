@@ -4,11 +4,11 @@ import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-fun getRetrofitClient(url: String): RetrofitService =
+fun getRetrofitClient(url: String): ApiService =
     Retrofit.Builder()
         .baseUrl(url)
         .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
-        .build().create(RetrofitService::class.java)
+        .build().create(ApiService::class.java)
 
 
 
