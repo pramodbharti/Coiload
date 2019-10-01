@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setViewModel() {
-        viewModel.getPhotos().observe(this, Observer { photos ->
+        viewModel.photos.observe(this, Observer { photos ->
             updatePhotos(photos)
         })
     }

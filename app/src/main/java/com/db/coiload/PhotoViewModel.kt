@@ -1,10 +1,15 @@
 package com.db.coiload
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.db.coiload.models.Photo
+import androidx.lifecycle.liveData
+import kotlinx.coroutines.Dispatchers
 
 class PhotoViewModel : ViewModel() {
     private val repository: PhotoRepository = PhotoRepository()
-    fun getPhotos(): LiveData<List<Photo>> = repository.getPhotos()
+
+    //Using coroutines
+    val photos = liveData(Dispatchers.IO) {
+        val fetchPhotos = repository.getPhotos()
+        emit(fetchPhotos)
+    }
 }
